@@ -2,6 +2,8 @@ package com.qa.accountApplication;
 
 public class Account {
 
+	private static int id = 0;
+	private int userId;
 	private String fName;
 	private String sName;
 	private int accoutnNo;
@@ -12,6 +14,15 @@ public class Account {
 		setAccoutnNo(accountNo);
 	}
 
+	public void setId() {
+		id += 1;
+		this.userId = id;
+	}
+	
+	public int getId() {
+		return this.userId;
+	}
+	
 	public String getfName() {
 		return fName;
 	}
