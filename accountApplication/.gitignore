@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 /target/
 .project
 .classpath
+.scannerwork
 .settings
+=======
+/target/
+.project
+.classpath
+<<<<<<< HEAD
+.scannerwork
+.settings
+>>>>>>> branch 'simple-project-account-branch' of https://github.com/jgurney1/account-project.git
+=======
+.settings
+>>>>>>> refs/remotes/origin/master
