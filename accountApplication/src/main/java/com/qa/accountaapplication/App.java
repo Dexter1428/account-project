@@ -1,6 +1,6 @@
-package com.qa.accountApplication;
+package com.qa.accountaapplication;
 
-import com.qa.accountApplication.services.*;;
+import com.qa.accountaapplication.services.*;;
 
 /**
  * Hello world!
@@ -8,9 +8,10 @@ import com.qa.accountApplication.services.*;;
  */
 public class App 
 {
+	private App() {}
+	
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
 		Account john = new Account("John", "Smith", 1234);
 		MapService map = new MapService();
 		Printer print = new Printer();

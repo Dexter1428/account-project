@@ -1,4 +1,4 @@
-package com.qa.accountApplication;
+package com.qa.accountaapplication;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

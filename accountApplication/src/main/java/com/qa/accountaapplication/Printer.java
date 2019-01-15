@@ -1,4 +1,4 @@
-package com.qa.accountApplication;
+package com.qa.accountaapplication;
 
 public class Printer {
 	

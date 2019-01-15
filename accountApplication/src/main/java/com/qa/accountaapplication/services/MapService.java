@@ -1,8 +1,8 @@
-package com.qa.accountApplication.services;
+package com.qa.accountaapplication.services;
 
 import java.util.HashMap;
 
-import com.qa.accountApplication.Account;
+import com.qa.accountaapplication.Account;
 
 public class MapService {
 

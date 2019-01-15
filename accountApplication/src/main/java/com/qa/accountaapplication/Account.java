@@ -1,4 +1,4 @@
-package com.qa.accountApplication;
+package com.qa.accountaapplication;
 
 public class Account {
 
@@ -12,10 +12,20 @@ public class Account {
 		setfName(fName);
 		setsName(sName);
 		setAccoutnNo(accountNo);
+		incId();
+		setUserId();
+		
 	}
 
-	public void setId() {
+	public static void incId() {
 		id += 1;
+	}
+	
+	public static int getGlobalId() {
+		return id;
+	}
+	
+	public void setUserId() {
 		this.userId = id;
 	}
 	
