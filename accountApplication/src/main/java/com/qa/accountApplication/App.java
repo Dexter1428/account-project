@@ -1,6 +1,5 @@
 package com.qa.accountApplication;
 
-import com.qa.accountApplication.*;
 import com.qa.accountApplication.services.*;;
 
 /**
