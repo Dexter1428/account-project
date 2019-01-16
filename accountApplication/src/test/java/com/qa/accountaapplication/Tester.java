@@ -61,10 +61,36 @@ public class Tester {
 		Account test2 = new Account("Bill", "Good", 4321);
 		MapService map = new MapService();
 		map.addAccount(test, test.getfName());
-		map.addAccount(test2, test.getfName());
+		map.addAccount(test2, test2.getfName());
 		AccountManager m = new AccountManager();
 		m.addAccounts(map.getMap());
-		assertEquals(2, m.getCount());
+		assertEquals(0, m.getCount());
+	}
+	
+	@Test
+	public void counter2() {
+		Account test = new Account("John", "Smith", 1234);
+		Account test2 = new Account("Bill", "Good", 4321);
+		MapService map = new MapService();
+		map.addAccount(test, test.getfName());
+		map.addAccount(test2, test2.getfName());
+		AccountManager m = new AccountManager();
+		m.findAccount(test.getfName());
+		assertEquals(1, m.getCount());
+	}
+	
+	@Test
+	public void counter3() {
+		Account test = new Account("John", "Smith", 1234);
+		Account test2 = new Account("Bill", "Good", 4321);
+		Account test3 = new Account("Bill", "Bad", 1423);
+		MapService map = new MapService();
+		map.addAccount(test, test.getfName());
+		map.addAccount(test2, test2.getfName());
+		map.addAccount(test3, test3.getfName());
+		AccountManager m = new AccountManager();
+		m.findAccount(test2.getfName());
+		assertEquals(2, m.getCount());	
 	}
 	
 	
