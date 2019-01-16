@@ -1,23 +1,24 @@
 package com.qa.accountaapplication.services;
-
 import java.util.HashMap;
+import java.util.Map;
 
 import com.qa.accountaapplication.Account;
 
 public class MapService {
 
-	private HashMap<Integer, Account> map = new HashMap<Integer, Account>();
+	private Map<String, Account> map = new HashMap<String, Account>();
 
 	
-	public void addAccount(Account acc, int id) {
-		map.put(id, acc);
+	public void addAccount(Account acc, String fName) {
+		map.put(fName, acc);
 	}
 	
-	public Account getAccount(int key) {
-		
+	public Account getAccount(String key) {
 		return map.get(key);
 		
 	}
 	
-	
+	public Map<String, Account> getMap() {
+		return this.map;
+	}
 }
