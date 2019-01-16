@@ -15,8 +15,8 @@ public class App
 		Account john = new Account("John", "Smith", 1234);
 		MapService map = new MapService();
 		Printer print = new Printer();
-		map.addAccount(john, john.getfName());
-		String toPrint = print.toString(map.getAccount(john.getfName()));
+		map.addAccount(john, john.getId());
+		String toPrint = print.toString(map.getAccount(john.getId()));
 		print.console(toPrint);
 		GsonTranslator gson = new GsonTranslator();
 		String result = gson.toJsonMap(map.getMap());

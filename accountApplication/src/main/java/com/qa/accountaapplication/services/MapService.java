@@ -6,19 +6,19 @@ import com.qa.accountaapplication.Account;
 
 public class MapService {
 
-	private Map<String, Account> map = new HashMap<String, Account>();
+	private Map<Integer, Account> map = new HashMap<Integer, Account>();
 
 	
-	public void addAccount(Account acc, String fName) {
+	public void addAccount(Account acc, int fName) {
 		map.put(fName, acc);
 	}
 	
-	public Account getAccount(String key) {
+	public Account getAccount(int key) {
 		return map.get(key);
 		
 	}
 	
-	public Map<String, Account> getMap() {
+	public Map<Integer, Account> getMap() {
 		return this.map;
 	}
 }

@@ -9,7 +9,7 @@ public class GsonTranslator {
 	Gson gson = new Gson();
 	
 	
-	public String toJsonMap(Map<String, Account> map) {
+	public String toJsonMap(Map<Integer, Account> map) {
 		return gson.toJson(map);
 		
 	}
