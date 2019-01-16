@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.qa.accountaaplication.managers.AccountManager;
 import com.qa.accountaapplication.Account;
 import com.qa.accountaapplication.Printer;
 import com.qa.accountaapplication.services.GsonTranslator;
@@ -53,4 +54,21 @@ public class Tester {
 		GsonTranslator g = new GsonTranslator();
 		assertEquals("{\"John\":{\"userId\":4,\"fName\":\"John\",\"sName\":\"Smith\",\"accoutnNo\":1234}}", g.toJsonMap(map.getMap()));
 	}
+	
+	@Test
+	public void counter() {
+		Account test = new Account("John", "Smith", 1234);
+		Account test2 = new Account("Bill", "Good", 4321);
+		MapService map = new MapService();
+		map.addAccount(test, test.getfName());
+		map.addAccount(test2, test.getfName());
+		AccountManager m = new AccountManager();
+		m.addAccounts(map.getMap());
+		assertEquals(2, m.getCount());
+	}
+	
+	
+	
+	
+	
 }
