@@ -12,7 +12,9 @@ public class Account {
 	private String sName;
 	private int accoutnNo;
 
-	public Account() {}
+	public Account() {
+		//needed for importing sql
+	}
 	
 	public Account(String fName, String sName, int accountNo) {
 		setfName(fName);
