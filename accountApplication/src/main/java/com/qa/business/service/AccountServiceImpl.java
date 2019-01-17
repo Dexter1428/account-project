@@ -26,4 +26,8 @@ public class AccountServiceImpl implements AccountService {
 		return repo.findAccount(id);
 	}
 
+	public String upDateAccount(int id, String account) {
+		return repo.upDateAccount(id, account);
+	}
+
 }

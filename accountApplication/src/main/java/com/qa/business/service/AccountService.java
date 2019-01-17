@@ -7,4 +7,5 @@ public interface AccountService {
 	String addAccount(String account);
 	String removeAccountByName(String fName);
 	Account findAccount(int id);
+	String upDateAccount(int id, String account);
 }

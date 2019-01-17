@@ -56,5 +56,18 @@ public class AccountDBRepository implements AccountRepository {
 	public Account findAccount(int id) {
 		return manager.find(Account.class, id);
 	}
+	
+	
+	@Transactional(REQUIRED)
+	public String upDateAccount(int id, String account) {
+		Account acc = manager.find(Account.class, id);
+		Account updated = util.getObjectForJSON(account, Account.class);
+		if(acc != null) {
+			manager.remove(acc);
+			manager.persist(updated);
+			return "{\"message\": \"Account updated\"}";
+		}
+		return "{\"message\": \"Account not found\"}";
+	}
 
 }
