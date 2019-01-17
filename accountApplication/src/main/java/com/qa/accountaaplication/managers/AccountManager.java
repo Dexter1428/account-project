@@ -1,6 +1,5 @@
 package com.qa.accountaaplication.managers;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,19 +7,18 @@ import java.util.Map;
 import com.qa.accountaapplication.Account;
 
 public class AccountManager {
-	
-	private int count =0;
-	private int occurences=0;
+
+	private int count = 0;
+	private int occurences = 0;
 	private ArrayList<Account> found = new ArrayList<Account>();
 	private Map<Integer, Account> accounts = new HashMap<Integer, Account>();
-
 
 	public void addAccounts(Map<Integer, Account> map) {
 		setAccounts(map);
 		setCount(map.size());
-		
+
 	}
-	
+
 	public int getCount() {
 		return count;
 	}
@@ -32,20 +30,19 @@ public class AccountManager {
 	public void setAccounts(Map<Integer, Account> accounts) {
 		this.accounts = accounts;
 	}
-	
+
 	public Account getAccount(int id) {
-		return this.accounts.get(id);
+		return accounts.get(id);
 	}
 
 	public void findAccount(String fname) {
-		for(int i =1; i<=this.count; i++) {
+		for (int i = 1; i <= count; i++) {
 			Account a = getAccount(i);
-			if(a.getfName().equals(fname)) {
+			if (a.getfName().equals(fname)) {
 				setOccurences(getOccurences() + 1);
 				searchedAccounts(a);
 			}
 		}
-		
 	}
 
 	public int getOccurences() {
@@ -63,6 +60,5 @@ public class AccountManager {
 	public void searchedAccounts(Account found) {
 		this.found.add(found);
 	}
-		
 
 }
